@@ -59,44 +59,10 @@ module Consul
 
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
-    config.i18n.default_locale = :en
+    config.i18n.default_locale = :es
     available_locales = [
-      "ar",
-      "bg",
-      "bs",
-      "ca",
-      "cs",
-      "da",
-      "de",
-      "el",
       "en",
-      "es",
-      "es-PE",
-      "eu",
-      "fa",
-      "fr",
-      "gl",
-      "he",
-      "hr",
-      "id",
-      "it",
-      "ka",
-      "nl",
-      "oc",
-      "pl",
-      "pt-BR",
-      "ro",
-      "ru",
-      "sl",
-      "sq",
-      "so",
-      "sr",
-      "sv",
-      "tr",
-      "uk-UA",
-      "val",
-      "zh-CN",
-      "zh-TW"]
+      "es"]
     config.i18n.available_locales = available_locales
     config.i18n.fallbacks = [I18n.default_locale, {
       "ca"    => "es",
@@ -105,7 +71,7 @@ module Consul
       "fr"    => "es",
       "gl"    => "es",
       "it"    => "es",
-      "oc"    => "fr",
+      "oc"    => "es",
       "pt-BR" => "es",
       "val"   => "es"
     }]

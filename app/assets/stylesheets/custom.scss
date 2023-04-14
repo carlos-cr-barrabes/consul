@@ -2,6 +2,159 @@
 //
 // You can also create SCSS files in the app/assets/stylesheets/custom/
 // folder and they will be loaded automatically.
-.top-bar {
-    background-color: #ffbbcc !important;
+@mixin for-phone-only {
+    @media (max-width: 599px) { @content; }
 }
+@mixin for-tablet-portrait-up {
+    @media (min-width: 600px) { @content; }
+}
+@mixin for-tablet-landscape-up {
+    @media (min-width: 900px) { @content; }
+}
+@mixin for-desktop-up {
+    @media (min-width: 1280px) { @content; }
+}
+
+
+.top-bar {
+    background-color: #ebebeb !important;
+}
+
+.top-bar .menu > li a {
+    color: #1A1A1A;
+    font-weight: 500;
+    text-decoration-line: underline;
+    font-size: 16px;
+}
+
+.notifications.unread-notifications::after {
+    color: #C9ED52;
+}
+
+.subnavigation a {
+    font-weight: 500;
+    font-size: 20px;
+    text-decoration-line: underline;
+    color: #1A1A1A;
+}
+
+.jumbo {
+    background-color: white;
+}
+
+.public {
+    max-width: 1280px !important;
+    margin: 0 auto !important;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+// Home page
+.fdj-header {
+  
+    .fdj-row {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .fdj-col-1 {
+        flex: none;
+        width: 100%;
+        box-sizing: border-box;
+        padding-left: 20px;
+    }
+
+    .fdj-col-2 {
+        flex: none;
+        width: 100%;
+        box-sizing: border-box;
+
+    
+    }
+
+    h1 {
+        font-size: 80px;
+        font-weight: 500;
+    }
+
+    .home-motto {
+        font-size: 40px;
+        font-weight: normal;
+        line-height: 44px;
+        strong {
+            font-weight: 600;
+        }
+    }
+
+    @include for-phone-only() {
+        h1 {
+            font-size: 60px;
+        }
+        .home-motto {
+            font-size: 30px;
+        }
+    }
+
+
+    @include for-tablet-landscape-up() {
+        .fdj-row {
+            flex-direction: row;
+        }
+
+        .fdj-col-1 {
+            flex-basis: 40%;
+            box-sizing: border-box;
+        }
+
+        .fdj-col-2 {
+            flex-basis: 60%;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            font-size: 5.8vw;
+
+        }
+    
+        .home-motto {
+            font-size: 3vw;
+        }
+    }
+
+    @include for-desktop-up() {
+        .fdj-col-1 {
+            padding-left: 0px;
+        }
+
+
+        h1 {
+            font-size: 80px;
+
+        }
+    
+        .home-motto {
+            font-size: 40px;
+        }
+    }
+
+/*
+    .fdj-col {
+        flex: 1;
+        box-sizing: border-box;
+    
+    }
+
+
+    @media (max-width: 767px) {
+        .fdj-col-1{
+            flex-basis: 100%;
+        }
+    }
+*/
+   
+}
+
+   
+
+
+// END Home page
