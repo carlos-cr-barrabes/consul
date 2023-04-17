@@ -28,7 +28,7 @@
 }
 
 .notifications.unread-notifications::after {
-    color: #C9ED52;
+    color: red;
 }
 
 .subnavigation a {
@@ -153,8 +153,20 @@
 */
    
 }
-
-   
-
-
 // END Home page
+
+// Custom pages
+.custom-page {
+    h2 {
+        padding-top: 20px;
+    } 
+
+    h3 {
+        padding-top: 15px;
+    }
+}
+
+#navigation-bar .subnavigation {
+    padding-left: 20px;
+
+}
