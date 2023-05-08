@@ -151,16 +151,30 @@
 // END Registro
 
 
+/* Empezar nuevo debate button */
 .public aside a.button.expanded {
     display: none;
 }
 
+/* Color band with search results title */
 .public div.search-results-summary {
     background-color: #EBEBEB
 }
 
+/* Menu items active color */
 .public div.wrapper header div#navigation_bar.subnavigation nav ul li a.is-active {
     color: #1A1A1A;
+}
+
+/* Registrarse button on home menu */
+.public div.wrapper header div.top-bar div#responsive-menu div.top-bar-right ul.menu.dropdown li a.button {
+    background-color: #1A1A1A;
+    border: 1 px solid #1A1A1A;
+    border-radius: 8px;
+    color: #F7F7F7;
+    font-size: 16px;
+    line-height: 24px;
+    text-decoration: none;
 }
 
 // Custom pages

@@ -5,14 +5,18 @@
   <%= image_tag(image_path_for("csd_portada.png"), alt: "Fundación Deporte Joven") %>
 
 </div>
-<section class="participa">
-<p>
-  <strong>Si deseas participar, regístrate con tu email</strong> y d&eacute;janos tus votaciones y comentarios.<br />
-  ¡Nos encantaría contar con tu participación! Recuerda que <strong>puedes participar en todos 
-  los debates.</strong> 
-</p>
-<a href="">Regístrate</a>
-</section>
+
+<% if not user_signed_in? %>
+  <section class="participa">
+
+    <p>
+      <strong>Si deseas participar, regístrate con tu email</strong> y d&eacute;janos tus votaciones y comentarios.<br />
+      ¡Nos encantaría contar con tu participación! Recuerda que <strong>puedes participar en todos 
+      los debates.</strong> 
+    </p>
+    <a href="/users/sign_up">Regístrate</a>
+  </section>
+<% end %>
 <% if header.present? %>
   <div class="header-card jumbo highlight">
     <div class="row">
