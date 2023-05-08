@@ -131,15 +131,22 @@
 
 // Registro
 .auth-page {
-    a {
+    span.checkbox > a {
         color: #F986AD;
         font-weight: 600;
     }
 
-    input .button {
+    form#new_user > p > a {
+        color: #F986AD;
+        font-weight: 600;
+    }
+
+    input.button.expanded {
         background-color: #F986AD;
         border: 1px solid #F986AD;
         border-radius: 8px;
+        font-size: 20px;
+        font-weight: 600;
     }
 
 }
