@@ -20,6 +20,13 @@
     background-color: #ebebeb !important;
 }
 
+.public header {
+    border: 0 !important;
+}
+.public > .wrapper > header::after {
+    border: 0 !important;
+}
+
 .top-bar .menu > li a {
     color: #1A1A1A;
     font-weight: 500;
@@ -45,115 +52,97 @@
 .public {
     max-width: 1280px !important;
     margin: 0 auto !important;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
+    border-left: 1px dashed violet;
+    border-right: 1px dashed violet;
 }
+
 // Home page
 .fdj-header {
-  
-    .fdj-row {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-    }
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
 
-    .fdj-col-1 {
-        flex: none;
-        width: 100%;
+    & > * {
         box-sizing: border-box;
-        padding-left: 20px;
     }
 
-    .fdj-col-2 {
-        flex: none;
-        width: 100%;
-        box-sizing: border-box;
-
-    
-    }
 
     h1 {
-        font-size: 80px;
-        font-weight: 500;
-    }
+        font-size: 61px;
+        line-height: 70px;
+        font-weight: 300;
 
-    .home-motto {
-        font-size: 40px;
-        font-weight: normal;
-        line-height: 44px;
         strong {
             font-weight: 600;
         }
+    }  
+}
+
+.participa {
+    margin: 46px 0;
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    p {
+        flex-basis: 80%;
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: 400;
     }
 
-    @include for-phone-only() {
-        h1 {
-            font-size: 60px;
-        }
-        .home-motto {
-            font-size: 30px;
-        }
+    a {
+        flex-basis: 20%;
+        display: inline-block;
+        padding: 16px 24px;
+        background-color: #000;
+        color: white;
+        max-width: 20%;
+
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 27px;
+        text-align: center;
+        border: 1px solid black;
+        border-radius: 8px;
+
     }
+}
 
+@include for-tablet-landscape-up() {
+    .fdj-header {
 
-    @include for-tablet-landscape-up() {
-        .fdj-row {
-            flex-direction: row;
-        }
-
-        .fdj-col-1 {
-            flex-basis: 40%;
-            box-sizing: border-box;
-        }
-
-        .fdj-col-2 {
-            flex-basis: 60%;
-            box-sizing: border-box;
-        }
-
-        h1 {
-            font-size: 5.8vw;
-
-        }
-    
-        .home-motto {
-            font-size: 3vw;
-        }
-    }
-
-    @include for-desktop-up() {
-        .fdj-col-1 {
-            padding-left: 0px;
-        }
-
-
-        h1 {
-            font-size: 80px;
-
-        }
-    
-        .home-motto {
-            font-size: 40px;
-        }
-    }
-
-/*
-    .fdj-col {
+        flex-direction: row;
+        align-items: center;
         flex: 1;
-        box-sizing: border-box;
-    
-    }
-
-
-    @media (max-width: 767px) {
-        .fdj-col-1{
-            flex-basis: 100%;
+        
+        h1 {
+            flex-basis: 40%;
         }
+        
+        img {
+            flex-basis: 60%;  
+        }    
     }
-*/
-   
 }
 // END Home page
+
+
+// Registro
+.auth-page {
+    a {
+        color: #F986AD;
+        font-weight: 600;
+    }
+
+    input .button {
+        background-color: #F986AD;
+        border: 1px solid #F986AD;
+        border-radius: 8px;
+    }
+
+}
 
 // Custom pages
 .custom-page {
@@ -167,6 +156,8 @@
 }
 
 #navigation-bar .subnavigation {
-    padding-left: 20px;
+    padding-left: 20px !important;
+    text-decoration: none;
+    font-size: 20px;
 
 }
