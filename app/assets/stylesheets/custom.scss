@@ -76,12 +76,14 @@
     }  
 }
 
-.participa {
+section.participa {
     margin: 46px 0;
     margin-bottom: 16px;
     display: flex;
     flex-direction: row;
     align-items: center;
+    background-color: #F7F7F7;
+    padding: 32px;
 
     p {
         flex-basis: 80%;
@@ -129,6 +131,11 @@
 
 // Registro
 .auth-page {
+
+    div.auth-image {
+        background-color: #F986AD;
+    }
+    
     span.checkbox > a {
         color: #F986AD;
         font-weight: 600;
