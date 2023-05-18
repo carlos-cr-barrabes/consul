@@ -18,14 +18,17 @@
       <%= f.hidden_field :locale, value: I18n.locale %>
 
       <%= f.text_field :username,  autofocus: true, maxlength: User.username_max_length,
-                                   hint: t("devise_views.users.registrations.new.username_note") %>
+                                   hint: t("devise_views.users.registrations.new.username_note"),
+                                   placeholder: t("devise_views.users.registrations.new.username_placeholder") %>
 
       <%= f.invisible_captcha :address %>
 
-      <%= f.email_field :email %>
+      <%= f.email_field :email,
+         placeholder: t("devise_views.users.registrations.new.useremail_placeholder") %>
 
-      <%= f.password_field :password, autocomplete: "off" %>
-
+      <%= f.password_field :password, autocomplete: "off",
+      placeholder: t("devise_views.users.registrations.new.password_placeholder")  %>
+      <p id="password_hint">* Para que la contraseña sea válida debe contener 8 caracteres alfanuméricos con una mayúscula y una minúscula.</p>
       <%= f.password_field :password_confirmation, autocomplete: "off",
                            label: t("devise_views.users.registrations.new.password_confirmation_label") %>
 
