@@ -19,9 +19,9 @@ es:
         processes: "Legislación colaborativa"
       debates:
         title: "Debates"
-        description: "En la sección de %{link} puedes exponer y compartir tu opinión con otras personas sobre temas que te preocupan relacionados con la ciudad. También es un espacio donde generar ideas que a través de las otras secciones de %{org} lleven a actuaciones concretas."
-        link: "debates ciudadanos"
-        feature: "Puedes abrir debates, comentarlos y valorarlos con los botones de <strong>Estoy de acuerdo</strong> o <strong>No estoy de acuerdo</strong>. Para ello tienes que %{link}."
+        description: "En la sección de %{link} puedes exponer y compartir tu opinión con otras personas e instituciones del sector, sobre los debates abiertos en cada una de las 3 arenas de %{org}. También es un espacio donde generar ideas que a través de las otras secciones de Plataforma Debates %{org} lleven a actuaciones concretas."
+        link: "debates"
+        feature: "Puedes participar en debates, añadiendo comentarios y valorándolos con los botones de <strong>Estoy de acuerdo</strong> o <strong>No estoy de acuerdo</strong>. Para ello tienes que %{link}."
         feature_link: "registrarte en %{org}"
         image_alt: "Botones para valorar los debates"
         figcaption: 'Botones "Estoy de acuerdo" y "No estoy de acuerdo" para valorar los debates.'
